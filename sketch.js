@@ -23,14 +23,13 @@ function setup() {
 function draw() {
   drag();
 
-  let b = sideLength * 0.5;
-  let a = b * sideLengthRatio;
+  let halfSideLength = sideLength * 0.5;
+  let a = halfSideLength * sideLengthRatio;
 
   mandelbrot.setUniform('minx', centerX - a);
   mandelbrot.setUniform('maxx', centerX + a);
-  mandelbrot.setUniform('miny', centerY + b);
-  mandelbrot.setUniform('maxy', centerY - b);
-
+  mandelbrot.setUniform('miny', centerY + halfSideLength);
+  mandelbrot.setUniform('maxy', centerY - halfSideLength);
 
   rect(-width * 0.5, -height * 0.5, width, height);
 }

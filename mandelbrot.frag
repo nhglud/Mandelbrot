@@ -13,9 +13,9 @@ uniform float maxy;
 const float MAX_ITERATIONS = 1000.0;
 
 float iterateMandelbrot(vec2 coord) {
-    
     float x = 0.;
     float y = 0.;
+
     for(float i = 0.; i < MAX_ITERATIONS; i++) {
         
         if(x * x + y * y > 4.0) return i / MAX_ITERATIONS;
@@ -28,9 +28,7 @@ float iterateMandelbrot(vec2 coord) {
     return 1.0;
 }
 
-
 void main() {
-
     float x = ((maxx - minx) * pos.x) + minx;
     float y = ((maxy - miny) * pos.y) + miny;
 
