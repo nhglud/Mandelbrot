@@ -11,7 +11,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800, WEBGL);
+  createCanvas(800, 600, WEBGL);
   centerX = -0.7;
   centerY = 0;
   sideLength = 2.4;

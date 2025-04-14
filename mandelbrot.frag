@@ -17,7 +17,6 @@ float iterateMandelbrot(vec2 coord) {
     float y = 0.;
 
     for(float i = 0.; i < MAX_ITERATIONS; i++) {
-        
         if(x * x + y * y > 4.0) return i / MAX_ITERATIONS;
         
         float xtmp = x * x - y * y + coord.x;
@@ -33,6 +32,7 @@ void main() {
     float y = ((maxy - miny) * pos.y) + miny;
 
     float i = iterateMandelbrot(vec2(x, y));
+
     gl_FragColor = vec4(i, i, i, 1.);
 }
 
